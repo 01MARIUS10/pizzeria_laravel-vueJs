@@ -16,3 +16,28 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/admin', function () {
+    $dashboard = [
+        "revenue"=>[
+            "stat"=>22.345,
+            "icon"=>"/image/money.png",
+            "text"=>"Total's revenue"
+        ],
+        "sales"=>[
+            "stat"=>134,
+            "icon"=>"/image/panier2.jpg",
+            "text"=>"Total's sales"
+        ],
+        "activity"=>[
+            "stat"=>22,
+            "icon"=>"/image/activity2.jpg",
+            "text"=>"Total's activity"
+        ],
+        "visit"=>[
+            "stat"=>225,
+            "icon"=>"/image/oeuil3.png",
+            "text"=>"Total's visit"
+        ]
+    ];
+    return view('admin.page.index',['dashboard'=>$dashboard]);
+});
