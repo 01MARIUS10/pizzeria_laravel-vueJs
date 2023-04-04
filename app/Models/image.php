@@ -23,4 +23,8 @@ class image extends Model
         return $this->hasOne(\App\Users::class,"image");
     }
 
+    public function visitor(){
+        return $this->hasOne(\App\Model\visitor::class,"image");
+    }
+
 }
