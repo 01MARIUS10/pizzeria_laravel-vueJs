@@ -42,4 +42,15 @@ class product extends Model
     // les attribut qui ne sont pas modifiable
     protected $guarded = ['id'];
 
+    public function productCategorie(){
+        return $this->belongsTo(\App\Models\product_categorie::class,"id_categorie");
+    }
+
+    public function productCaracteristique(){
+        return $this->belongsTo(\App\Models\product_caracteristique::class,"id_caracteristique");
+    }
+    public function image(){
+        return $this->BelongsTo(\App\image::class,"image");
+    }
+
 }

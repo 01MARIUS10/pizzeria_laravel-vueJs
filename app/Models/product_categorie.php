@@ -33,4 +33,7 @@ class product_categorie extends Model
     protected $fillable = ['categorie_label'];
 
 
+    public function product(){
+        $this->hasOne(\App\product::class,"id_categorie");
+    }
 }

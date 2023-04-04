@@ -25,4 +25,8 @@ class product_caracteristique extends Model
     public $timestamp = false;
 
     protected $fillable = ['size'];
+
+    public function product(){
+        $this->hasOne(\App\product::class,"id_caracteristique");
+    }
 }

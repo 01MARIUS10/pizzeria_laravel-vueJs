@@ -13,4 +13,9 @@ class image extends Model
     public $timestamp=false;
     protected $fillable = ['name','path','type','desc'];
     protected $guard = ['id'];
+
+
+    public function product(){
+        $this->hasOne(\App\product::class,"image");
+    }
 }
