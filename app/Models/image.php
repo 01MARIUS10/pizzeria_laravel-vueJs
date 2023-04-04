@@ -18,4 +18,9 @@ class image extends Model
     public function product(){
         $this->hasOne(\App\product::class,"image");
     }
+
+    public function user(){
+        return $this->hasOne(\App\Users::class,"image");
+    }
+
 }
