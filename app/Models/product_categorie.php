@@ -34,6 +34,6 @@ class product_categorie extends Model
 
 
     public function product(){
-        $this->hasOne(\App\product::class,"id_categorie");
+        $this->hasMany(\App\product::class,"id_categorie");
     }
 }

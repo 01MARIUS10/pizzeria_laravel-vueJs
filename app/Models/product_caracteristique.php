@@ -27,6 +27,6 @@ class product_caracteristique extends Model
     protected $fillable = ['size'];
 
     public function product(){
-        $this->hasOne(\App\product::class,"id_caracteristique");
+        $this->hasMany(\App\product::class,"id_caracteristique");
     }
 }
