@@ -15,7 +15,7 @@ class CreateAchatsTable extends Migration
     {
         Schema::create('achats', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('id_product')->constrained('product');
+            $table->foreignId('id_product')->constrained('products');
             $table->foreignId('id_visitor')->constrained('visitors');
             $table->timestamps();
         });

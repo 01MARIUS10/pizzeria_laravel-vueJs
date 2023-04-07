@@ -20,4 +20,7 @@ class achat extends Model
     public function visitor(){
         return $this->belongsTo(\App\Models\visitor::class,"id_visitor");
     }
+    public function notification(){
+        return $this->hasOne(\App\Models\notification::class,"id_entityAchat");
+    }
 }

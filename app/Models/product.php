@@ -10,7 +10,7 @@ class product extends Model
     use HasFactory;
 
     // renomination de la table product
-    protected $table = "product";
+    protected $table = "products";
 
     // fixer le primary key de la table
     protected $primaryKey = "id";
@@ -55,6 +55,9 @@ class product extends Model
 
     public function achat(){
         return $this->hasMany(\App\Models\achat::class,"id_product");
+    }
+    public function notification(){
+        return $this->hasOne(\App\Models\notification::class,"id_entityProduct");
     }
 
 }

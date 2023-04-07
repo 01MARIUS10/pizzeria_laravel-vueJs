@@ -30,6 +30,9 @@ class chat extends Model
     public function user(){
         return $this->belongsTo(\App\Models\User::class,"id_user");
     }
+    public function notification(){
+        return $this->hasOne(\App\Models\notification::class,"id_entityChat");
+    }
 }
 
 

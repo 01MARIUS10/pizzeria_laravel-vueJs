@@ -16,10 +16,9 @@ class CreateNotificationsTable extends Migration
         Schema::create('notifications', function (Blueprint $table) {
             $table->id();
             $table->foreignId('id_categorie')->constrained('notification_categories');
-            $table->foreignId('id_entity_label')->constrained('notification_entity_labels');
             $table->foreignId('id_entityChat')->constrained('chats');
             $table->foreignId('id_entityAchat')->constrained('achats');
-            $table->foreignId('id_entityProduct')->constrained('product');
+            $table->foreignId('id_entityProduct')->constrained('products');
 
             $table->timestamps();
         });
