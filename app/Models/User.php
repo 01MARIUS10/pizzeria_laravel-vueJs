@@ -48,4 +48,7 @@ class User extends Authenticatable
     public function image(){
         return $this->belongsTo(\App\Models\image::class,"image");
     }
+    public function chat(){
+        return $this->hasMany(\App\Models\chat::class,"id_user");
+    }
 }
