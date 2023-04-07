@@ -11,4 +11,7 @@ class visitor extends Model
     public function image(){
         return $this->belongsTo(\App\Model\image::class,"image");
     }
+    public function achat(){
+        return $this->hasOne(\App\Models\achat::class,"id_visitor");
+    }
 }

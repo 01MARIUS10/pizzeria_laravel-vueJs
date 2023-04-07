@@ -32,7 +32,6 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
-
     /**
      * The attributes that should be cast.
      *
@@ -41,7 +40,6 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-
     public function userCategorie(){
         return $this->belongsTo(\App\Models\user_categorie::class,"user_categorie");
     }

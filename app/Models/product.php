@@ -53,4 +53,8 @@ class product extends Model
         return $this->BelongsTo(\App\image::class,"image");
     }
 
+    public function achat(){
+        return $this->hasMany(\App\Models\achat::class,"id_product");
+    }
+
 }
