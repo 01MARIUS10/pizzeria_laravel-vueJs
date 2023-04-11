@@ -1,4 +1,4 @@
-@extends("admin.base")
+@extends("page.admin.base")
 
 @section("admin-content")
     <div class="welcoming m-3">

@@ -19528,6 +19528,8 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 // 3. On monte l'application Vue sur l'élément #app
 (0,vue__WEBPACK_IMPORTED_MODULE_0__.createApp)(_components_AppComponent_vue__WEBPACK_IMPORTED_MODULE_1__["default"]).mount("#app");
 
+//
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":

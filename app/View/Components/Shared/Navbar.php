@@ -23,6 +23,6 @@ class Navbar extends Component
      */
     public function render()
     {
-        return view('admin.components.shared.navbar');
+        return view('shared.navbar');
     }
 }

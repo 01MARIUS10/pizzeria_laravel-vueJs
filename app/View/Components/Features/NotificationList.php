@@ -23,6 +23,6 @@ class NotificationList extends Component
      */
     public function render()
     {
-        return view('admin.components.features.notification-list');
+        return view('components.features.notification-list');
     }
 }

@@ -12,10 +12,13 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/',function (){
+    return view('page.index');
+})->name('acceuil');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 Route::get('/admin', function () {
     $dashboard = [
         "revenue"=>[
@@ -39,5 +42,5 @@ Route::get('/admin', function () {
             "text"=>"Total's visit"
         ]
     ];
-    return view('admin.page.index',['dashboard'=>$dashboard]);
-});
+    return view('page.admin.index',['dashboard'=>$dashboard]);
+})->name('admin_acceuil');

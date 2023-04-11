@@ -23,6 +23,6 @@ class ChatList extends Component
      */
     public function render()
     {
-        return view('admin.components.features.chat-list');
+        return view('components.features.chat-list');
     }
 }

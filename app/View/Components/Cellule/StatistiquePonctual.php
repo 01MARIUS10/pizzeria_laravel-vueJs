@@ -34,6 +34,6 @@ class StatistiquePonctual extends Component
      */
     public function render()
     {
-        return view('admin.cellule.statistique-ponctual');
+        return view('components.cellule.statistique-ponctual');
     }
 }

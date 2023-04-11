@@ -23,6 +23,6 @@ class StatistiqueRevenue extends Component
      */
     public function render()
     {
-        return view('admin.components.features.statistique-revenue');
+        return view('components.features.statistique-revenue');
     }
 }

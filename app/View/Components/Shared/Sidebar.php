@@ -23,6 +23,6 @@ class Sidebar extends Component
      */
     public function render()
     {
-        return view('admin.components.shared.sidebar');
+        return view('shared.sidebar');
     }
 }

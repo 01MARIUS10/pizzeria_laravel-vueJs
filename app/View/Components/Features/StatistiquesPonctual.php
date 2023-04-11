@@ -57,6 +57,6 @@ class StatistiquesPonctual extends Component
      */
     public function render()
     {
-        return view('admin.components.features.statistiques-ponctual');
+        return view('components.features.statistiques-ponctual');
     }
 }
