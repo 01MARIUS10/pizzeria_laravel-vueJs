@@ -12,35 +12,57 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
+
+// ========================================================================================================
+// -------------------------------------------------------------------------------------------------------
+// ----->  FRONT OFFICE
+// -------------------------------------------------------------------------------------------------------
+
 Route::get('/',function (){
-    return view('page.index');
+    return view('pages.home');
 })->name('acceuil');
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-Route::get('/admin', function () {
-    $dashboard = [
-        "revenue"=>[
-            "stat"=>22.345,
-            "icon"=>"/image/money.png",
-            "text"=>"Total's revenue"
-        ],
-        "sales"=>[
-            "stat"=>134,
-            "icon"=>"/image/panier2.jpg",
-            "text"=>"Total's sales"
-        ],
-        "activity"=>[
-            "stat"=>22,
-            "icon"=>"/image/activity2.jpg",
-            "text"=>"Total's activity"
-        ],
-        "visit"=>[
-            "stat"=>225,
-            "icon"=>"/image/oeuil3.png",
-            "text"=>"Total's visit"
-        ]
-    ];
-    return view('page.admin.index',['dashboard'=>$dashboard]);
-})->name('admin_acceuil');
+
+
+// ========================================================================================================
+// -------------------------------------------------------------------------------------------------------
+// ----->  BACK OFFICE
+// -------------------------------------------------------------------------------------------------------
+
+Route::prefix('admin')->group(function(){
+    Route::get('/',function (){
+        $dashboard = [
+            "revenue"=>[
+                "name"=>"revenue",
+                "stat"=>22.345
+            ],
+            "sales"=>[
+                "name"=>"sales",
+                "stat"=>134
+            ],
+            "activity"=>[
+                "name"=>"activity",
+                "stat"=>22
+            ],
+            "visit"=>[
+                "name"=>"visit",
+                "stat"=>225
+            ]
+        ];
+        return view('pages.admin.home',['dashboard'=>$dashboard]);
+    })->name('adminHome');
+
+    Route::get('/chats',function (){
+        return view('pages.admin.chat');
+    })->name('chats');
+
+    Route::get('/historiques',function (){
+        return view('pages.admin.historique');
+    })->name('historiques');
+
+    Route::get('/products',function (){
+        return view('pages.admin.menu');
+    })->name('produits');
+});
