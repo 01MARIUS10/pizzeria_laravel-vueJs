@@ -6,22 +6,22 @@
         <ul class="d-flex flex-column w-100 px-1">
             <li>
                 <p><span class="material-symbols-outlined">home</span></p>
-                <span> Home </span>
+                <span ><a href="{{ route('adminHome') }}">Home</a>  </span>
                 <p><span class="material-icons">chevron_right</span></p>
             </li>
             <li>
                 <p><span class="material-icons" style="font-size:20px;">content_paste</span></p>
-                <span> Product</span>
+                <span ><a href="{{ route('produits') }}"> Products </a></span>
                 <p><span class="material-icons md-inactive">chevron_right</span></p>
             </li>
             <li>
                 <p><span class="material-icons" style="font-size:20px;">event_note</span></p>
-                <span> Historique cell</span>
+                <span ><a href="{{ route('historiques') }}"> Historique cell</a></span>
                 <p><span class="material-icons md-inactive">chevron_right</span></p>
             </li>
             <li>
                 <p><span class="material-icons" style="font-size:20px;">question_answer</span></p>
-                <span> Chat</span>
+                <span ><a href="{{ route('chats') }}"> Chats </a></span>
                 <p><span class="material-icons md-inactive">chevron_right</span></p>
             </li>
         </ul>
