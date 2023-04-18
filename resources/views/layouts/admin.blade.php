@@ -17,11 +17,13 @@
 
     </head>
     <body class="">
-        <x-shared.navbar />
-        <main>
+        <nav style="min-width: 1600px;">
+            <x-shared.navbar />
+        </nav>
+        <main style="min-width: 1600px;">
             <div id="content" class=" d-flex h-100 w-100">
                 <x-shared.sidebar />
-                <div id="main_content">
+                <div id="main_content"  class="pb-4">
                     @yield('admin-content')
                 </div>
             </div>

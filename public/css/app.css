@@ -20,16 +20,16 @@ ul{
 .c-red{
     color:var(--red)
 }
+.textLabel{
+    font-size: 1.3rem;
+    color: var(--greyD);
+}
 /* ---------------------------------------------------------- */
 
 body{
     min-height:100vh;
 }
 /* ---------------------------------------------------------- */
-
-#navbar .search__container {
-
-}
 
 #navbar .search__input {
     width: 100%;
@@ -86,9 +86,6 @@ body{
     width: 600px;
     justify-content: space-between;
 }
-#navbar .search{
-    /* flex-grow: 1; */
-}
 #navbar .search input{
     height: 36px;
     width: 100px;
@@ -101,7 +98,7 @@ body{
 /* ---------------------------------------------------------- */
 /*main*/
 main{
-    height:calc(100vh - 60px);
+    /* height:calc(100vh - 60px); */
     background: var(--grey);
 }
 /* ---------------------------------------------------------- */
@@ -134,7 +131,7 @@ main{
 
 /* ---------------------------------------------------------- */
 main #main_content{
-    width : calc(100vw - 300px);
+    width : calc(100% - 300px);
 }
 
 /* ---------------------------------------------------------- */
@@ -147,9 +144,7 @@ main #main_content{
     background: var(--white);
     border-radius: 3px;
 }
-#PonctualStatistiqueBoard .image{
-    /* width: 60px; */
-}
+
 #PonctualStatistiqueBoard p strong{
     font-size: 1.5rem;
 }
@@ -158,10 +153,12 @@ main #main_content{
     color:var(--greyD);
 }
 /* ---------------------------------------------------------- */
-#statistiqueRevenue {
 
+
+
+.componentCard{
+    background: var(--white);
+    border-radius: 20px;
+    /* margin:10px; */
 }
 
-#statistiqueRevenue img{
-
-}

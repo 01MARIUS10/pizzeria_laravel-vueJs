@@ -17,6 +17,9 @@
         "vue-loader": "^16.8.3"
     },
     "dependencies": {
-        "vue": "^3.2.36"
+        "apexcharts": "^3.39.0",
+        "vue": "^3.2.36",
+        "vue3-apexcharts": "^1.4.1",
+        "vue3-circle-progress": "^1.0.7"
     }
 }
